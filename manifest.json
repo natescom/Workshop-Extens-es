@@ -1,0 +1,21 @@
+{
+    "name": "Jira Background",
+    "description": "Troca o Background do Jira",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "48": "ico.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js":["content.js"],
+        "runAt": "document_end"
+    }],
+    "background":{
+        "service_worker": "background.js",
+        "scripts": ["background.js"]
+    }
+}
